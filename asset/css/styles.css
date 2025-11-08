@@ -4,6 +4,7 @@
 
 :root {
   --primary-color: #212832;
+  --secondary-color: #7264d6;
   --text-color: #696d76;
 }
 
@@ -52,6 +53,31 @@ button {
 .btn:hover {
   cursor: pointer;
   opacity: 0.9;
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #696d77;
+}
+
+.section-label::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  background-color: var(--secondary-color);
+}
+
+.section-desc {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1.7;
+  color: var(--text-color);
 }
 
 /* Header */
@@ -131,4 +157,363 @@ button {
 .header__signup {
   height: 52px;
   border-radius: 6px;
+}
+
+/* Hero */
+.hero {
+  margin-top: 68px;
+}
+
+.hero__body {
+  display: flex;
+  align-items: center;
+}
+
+.hero__content {
+  width: 46%;
+}
+
+.hero__title {
+  margin-top: 12px;
+  font-weight: 700;
+  font-size: 6rem;
+  line-height: 1.17;
+  color: var(--primary-color);
+}
+
+.hero__highlight {
+  color: var(--secondary-color);
+}
+
+.hero__desc {
+  margin-top: 20px;
+}
+
+.hero__form {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  height: 74px;
+  box-shadow: 0px 16px 42px 0px #00000012;
+  border-radius: 8px;
+}
+
+.hero__input {
+  padding: 0 23px;
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: inherit;
+}
+
+.hero__input::placeholder {
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--text-color);
+}
+
+.hero__submit {
+  margin-right: 8px;
+  min-width: 150px;
+  border-radius: inherit;
+  background-color: var(--secondary-color);
+  border: none;
+  outline: none;
+}
+
+.hero__submit:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.hero__note {
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.7;
+  color: var(--text-color);
+}
+
+.hero__media {
+  margin-left: auto;
+  display: flex;
+}
+
+.hero__mobile {
+  position: relative;
+  padding: 40px 10px 30px;
+  width: 296px;
+  height: 562px;
+  border: 12px solid var(--primary-color);
+  border-radius: 40px;
+}
+
+.hero__mobile::after {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  display: inline-block;
+  width: 144px;
+  height: 36px;
+  background-color: #3c2f60;
+  border-radius: 0px 0px 18px 18px;
+}
+
+.card {
+  position: relative;
+  padding: 16px;
+  width: 250px;
+  height: 150px;
+  border-radius: 20px;
+  background: linear-gradient(76.13deg, #30acea 11.52%, #316fea 70.78%);
+  overflow: hidden;
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__header,
+.card__info {
+  position: relative;
+  z-index: 1;
+}
+
+.card__title {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #fff;
+}
+
+.card__circles {
+  display: flex;
+}
+
+.card__circle {
+  width: 24px;
+  height: 24px;
+  background-color: #feef65;
+  border-radius: 50%;
+}
+
+.card__circle:nth-child(1) {
+  margin-right: -5px;
+  background-color: #fe6565;
+}
+
+.card__available {
+  margin-top: 2px;
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 1;
+  color: #fff;
+}
+
+.card__info {
+  margin-top: 38px;
+  display: flex;
+  gap: 12px;
+}
+
+.card__info-label {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1;
+  color: #fff;
+}
+
+.card__info-value {
+  display: block;
+  margin-top: 5px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: #fff;
+}
+
+.card__decor {
+  position: absolute;
+}
+
+.card__decor-top {
+  top: 0;
+  left: 0;
+}
+
+.card__decor-bottom {
+  right: 0;
+  bottom: 0;
+}
+
+.transactions {
+  margin-top: 24px;
+}
+
+.transactions__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.transactions__heading {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #31456a;
+}
+
+.transactions__item {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.transactions__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #edf8fc;
+}
+
+.transactions__item:nth-child(2) .transactions__img {
+  background-color: #fbefef;
+}
+
+.transactions__item:nth-child(3) .transactions__img {
+  background-color: #ecf5f4;
+}
+
+.transactions__item:nth-child(4) .transactions__img {
+  background-color: #f1effb;
+}
+
+.transactions__icon {
+  display: block;
+}
+
+.transactions__body {
+  flex: 1;
+  margin-left: 14px;
+}
+
+.transactions__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.transactions__row + .transactions__row {
+  margin-top: 5px;
+}
+
+.transactions__title,
+.transactions__transfer {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--primary-color);
+}
+
+.transactions__desc,
+.transactions__time {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--text-color);
+}
+
+.interest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 127px 0 0 44px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #da6464;
+}
+
+.interest__percent {
+  font-weight: 600;
+  font-size: 4.4rem;
+  line-height: 1;
+  color: #fff;
+}
+
+.interest__text {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #fff;
+}
+
+.hero__decor {
+  position: absolute;
+  z-index: 1;
+}
+
+.hero__deposit {
+  top: 101px;
+  left: -112px;
+  width: 174px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  box-shadow: 0px 10px 20px 0px #00000012;
+  background-color: #fff;
+}
+
+.hero__deposit-text {
+  margin-left: 8px;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #31456a;
+}
+
+.hero__deposit-money {
+  margin-left: 19px;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #4ab5e3;
+}
+
+.hero__secured {
+  bottom: 57px;
+  right: -87px;
+  width: 124px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  background-color: #439f90;
+  border-radius: 10px;
+}
+
+.hero__secured-money {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #fff;
+}
+
+.hero__secured-text {
+  margin-top: 5px;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1;
+  color: #fff;
 }
