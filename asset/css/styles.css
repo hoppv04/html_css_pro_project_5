@@ -70,7 +70,15 @@ button {
   display: inline-block;
   width: 18px;
   height: 2px;
-  background-color: var(--secondary-color);
+  background-color: #696d77;
+}
+
+.section-heading {
+  color: var(--primary-color);
+  margin-top: 12px;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.25;
 }
 
 .section-desc {
@@ -516,4 +524,112 @@ button {
   font-size: 0.8rem;
   line-height: 1;
   color: #fff;
+}
+
+/* How It Works */
+.how-it-works {
+  margin-top: 160px;
+}
+
+.how-it-works__body {
+  display: flex;
+  align-items: center;
+}
+
+.how-it-works__figure,
+.how-it-works__content {
+  width: 470px;
+}
+
+.how-it-works__figure {
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 470px;
+}
+
+.how-it-works__figure::before {
+  content: url(../imgs/how-it-work-bg.svg);
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+}
+
+.how-it-works__img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 456px;
+  height: 619px;
+  object-fit: cover;
+}
+
+.how-it-works__content {
+  margin-left: auto;
+}
+
+.how-it-works__list {
+  margin-top: 70px;
+}
+
+.how-it-works__item {
+  margin-top: 30px;
+}
+
+.how-it-works__title {
+  color: var(--primary-color);
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.46;
+}
+
+.how-it-works__desc {
+  color: var(--text-color);
+  margin-top: 16px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.how-it-works__decor {
+  position: absolute;
+  z-index: 1;
+}
+
+.how-it-works__decor--top {
+  top: 76px;
+  right: 62px;
+}
+
+.how-it-works__decor--bottom {
+  bottom: 96px;
+  right: -100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 226px;
+  height: 70px;
+  border-radius: 8px;
+  background: #fffdfa;
+  box-shadow: 0 14px 34px 0 rgba(0, 0, 0, 0.07);
+}
+
+.how-it-works__congratulations {
+  margin-left: 10px;
+  font-family: Inter, sans-serif;
+}
+
+.how-it-works__congratulations-title {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.how-it-works__congratulations-text {
+  color: var(--text-color);
+  margin-top: 8px;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
