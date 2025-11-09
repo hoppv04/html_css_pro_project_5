@@ -30,6 +30,10 @@ button {
   font-family: inherit;
 }
 
+section + section {
+  margin-top: 160px;
+}
+
 .container {
   width: 1170px;
   max-width: calc(100% - 48px);
@@ -82,6 +86,7 @@ button {
 }
 
 .section-desc {
+  margin-top: 20px;
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 1.7;
@@ -193,10 +198,6 @@ button {
   color: var(--secondary-color);
 }
 
-.hero__desc {
-  margin-top: 20px;
-}
-
 .hero__form {
   margin-top: 40px;
   display: flex;
@@ -276,7 +277,7 @@ button {
   width: 250px;
   height: 150px;
   border-radius: 20px;
-  background: linear-gradient(76.13deg, #30acea 11.52%, #316fea 70.78%);
+  background: linear-gradient(76.13deg, #8679e4 11.52%, #7264d6 70.78%);
   overflow: hidden;
 }
 
@@ -287,7 +288,8 @@ button {
 }
 
 .card__header,
-.card__info {
+.card__info,
+.card__available {
   position: relative;
   z-index: 1;
 }
@@ -527,10 +529,6 @@ button {
 }
 
 /* How It Works */
-.how-it-works {
-  margin-top: 160px;
-}
-
 .how-it-works__body {
   display: flex;
   align-items: center;
@@ -632,4 +630,274 @@ button {
   margin-top: 8px;
   font-size: 1.2rem;
   font-weight: 400;
+}
+
+/* Feature */
+.feature__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.feature__col--content {
+  width: 470px;
+  flex-shrink: 0;
+}
+
+.feature__list {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.feature__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+}
+
+.feature__item::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #7264d6;
+}
+
+.feature__btn {
+  margin-top: 38px;
+  width: 150px;
+}
+
+.feature__col--media {
+  position: relative;
+  margin-left: auto;
+  padding-right: 88px;
+}
+
+.feature__card {
+  padding: 38px;
+  width: 482px;
+  height: 322px;
+}
+
+.feature__card .card__title {
+  font-size: 2.4rem;
+}
+
+.feature__card .card__available {
+  margin-top: 10px;
+  font-size: 3.2rem;
+}
+
+.feature__card .card__circle {
+  width: 48px;
+  height: 48px;
+}
+
+.feature__card .card__circle:nth-child(1) {
+  margin-right: -10px;
+}
+
+.feature__card .card__info {
+  gap: 28px;
+  margin-top: 98px;
+}
+
+.feature__card .card__info-label {
+  font-size: 2rem;
+}
+
+.feature__card .card__info-value {
+  margin-top: 10px;
+  font-size: 2.2rem;
+}
+
+.feature__card-decor {
+  position: absolute;
+  z-index: 2;
+}
+
+.feature__send {
+  top: -48px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 13px;
+  width: 276px;
+  height: 86px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0px 14px 38px 0px #00000012;
+}
+
+.feature__send-figure {
+  margin-right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(218, 100, 100, 0.1);
+  box-shadow: -4px -2px 16px 0 #fff, 4px 2px 16px 0 rgba(136, 165, 191, 0.48);
+  font-family: Inter, sans-serif;
+}
+
+.feature__send-content {
+  flex: 1;
+}
+
+.feature__send-info,
+.feature__send-detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature__send-detail {
+  margin-top: 4px;
+}
+
+.feature__send-title {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.feature__send-amount {
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.feature__send-description,
+.feature__send-date {
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.feature__income {
+  right: 0;
+  bottom: -48px;
+  padding: 14px;
+  width: 120px;
+  height: 120px;
+  border-radius: 16px;
+  background-color: #439f90;
+}
+
+.feature__income-figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.feature__income-title {
+  margin-top: 14px;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: #fff;
+}
+
+.feature__income-amount {
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: #fff;
+}
+
+.feature__figure {
+  position: relative;
+  width: 470px;
+  display: flex;
+  justify-content: center;
+}
+
+.feature__figure::after {
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  content: url(../imgs/feature-bg.png);
+}
+
+.feature__img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 413px;
+  height: 600px;
+  object-fit: cover;
+}
+
+.feature__col--thumb {
+  position: relative;
+}
+
+.feature__payment-methods {
+  position: absolute;
+  z-index: 1;
+  bottom: 57px;
+  right: -74px;
+  padding: 28px;
+  width: 281px;
+  height: 220px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 44px 48px 0px #0000001a;
+}
+
+.feature__payment-methods-title {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.67;
+}
+
+.feature__payment-methods-group {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.feature__payment-methods-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  border-radius: 4px;
+  background-color: #f2f2fa;
+}
+
+.feature__payment-methods-item:last-child {
+  background-color: #f9ea63;
+}
+
+.feature__decor-money {
+  position: absolute;
+  z-index: 1;
+  right: -100px;
+  bottom: 222px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #7264d6;
+  box-shadow: 0px 15px 40px 0px #0000001a;
 }
